@@ -79,7 +79,7 @@ Custom `apiMiddleware` listens for rejected async thunks and automatically shows
 2. If tokens exist → user is authenticated → Main navigator shown
 3. If no tokens → Auth navigator shown
 4. On login → tokens saved to SecureStore via `storageService`
-5. API requests → `Authorization: ****** header injected by Axios interceptor
+5. API requests → JWT auth header injected automatically by Axios request interceptor
 6. On 401 response → automatic token refresh attempted
 7. If refresh fails → user logged out, tokens cleared
 

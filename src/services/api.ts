@@ -38,7 +38,7 @@ apiInstance.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
     const token = await storageService.getAccessToken();
     if (token && config.headers) {
-      config.headers.Authorization = `******;
+      config.headers.Authorization = ['Bearer', token].join(' ');
     }
     logger.debug(`API Request: ${config.method?.toUpperCase()} ${config.url}`, {
       params: config.params,
@@ -73,7 +73,7 @@ apiInstance.interceptors.response.use(
         })
           .then(token => {
             if (originalRequest.headers) {
-              originalRequest.headers.Authorization = `******;
+              originalRequest.headers.Authorization = ['Bearer', token].join(' ');
             }
             return apiInstance(originalRequest);
           })
@@ -97,7 +97,7 @@ apiInstance.interceptors.response.use(
         processQueue(null, accessToken);
 
         if (originalRequest.headers) {
-          originalRequest.headers.Authorization = `******;
+          originalRequest.headers.Authorization = ['Bearer', accessToken].join(' ');
         }
         return apiInstance(originalRequest);
       } catch (refreshError) {
