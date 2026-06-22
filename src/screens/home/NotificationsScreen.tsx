@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { Screen } from '@components/layout/Screen';
 import { EmptyState } from '@components/layout/EmptyState';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';

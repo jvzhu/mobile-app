@@ -8,8 +8,8 @@ import { apiMiddleware } from './middleware/apiMiddleware';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['auth', 'ui'],
-  blacklist: ['tasks', 'notifications'],
+  whitelist: ['ui'],
+  blacklist: ['auth', 'tasks', 'notifications'],
 };
 
 const combinedReducer = combineReducers(rootReducer);

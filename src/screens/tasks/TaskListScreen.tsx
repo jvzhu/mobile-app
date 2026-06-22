@@ -10,7 +10,6 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import type { TaskStackParamList } from '@types/navigation';
-import { Screen } from '@components/layout/Screen';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';
 import { Badge } from '@components/ui/Badge';

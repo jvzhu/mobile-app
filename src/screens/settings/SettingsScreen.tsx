@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Switch, StyleSheet, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { Screen } from '@components/layout/Screen';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';
@@ -9,7 +8,6 @@ import { useTheme } from '@hooks/useTheme';
 import { useAppDispatch } from '@hooks/useAppDispatch';
 import { useAppSelector } from '@hooks/useAppSelector';
 import { setLanguage } from '@store/slices/uiSlice';
-import { useTranslation } from 'react-i18next';
 import { storageSet } from '@utils/storage';
 import { STORAGE_KEYS } from '@constants/storage';
 import i18n from '@i18n/index';
@@ -44,12 +42,10 @@ const SettingRow: React.FC<SettingRowProps> = ({ label, value, onPress, rightEle
 };
 
 export const SettingsScreen: React.FC = () => {
-  const navigation = useNavigation();
-  const { theme, themeMode, setThemeMode, isDark } = useTheme();
+  const { theme, themeMode, setThemeMode } = useTheme();
   const { colors } = theme;
   const dispatch = useAppDispatch();
   const { language } = useAppSelector(state => state.ui);
-  const { t } = useTranslation();
 
   const themeCycle = (): void => {
     const modes: ThemeMode[] = ['light', 'dark', 'system'];

@@ -1,4 +1,5 @@
 import * as Notifications from 'expo-notifications';
+import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 import { api } from './api';
 import { API_ENDPOINTS } from '@constants/api';
@@ -44,7 +45,7 @@ export const notificationService = {
     }
 
     const tokenData = await Notifications.getExpoPushTokenAsync({
-      projectId: 'your-eas-project-id',
+      projectId: Constants.expoConfig?.extra?.eas?.projectId,
     });
 
     return tokenData.data;

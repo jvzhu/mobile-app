@@ -23,7 +23,7 @@ export const authService = {
     await storageService.saveTokens(tokens.accessToken, tokens.refreshToken);
     await storageService.setSecureItem(STORAGE_KEYS.USER, JSON.stringify(user));
     return { user, tokens };
-  }
+  },
 
   async register(data: RegisterData): Promise<AuthResponse> {
     const response = await api.post<ApiResponse<AuthResponse>>(
@@ -34,7 +34,7 @@ export const authService = {
     await storageService.saveTokens(tokens.accessToken, tokens.refreshToken);
     await storageService.setSecureItem(STORAGE_KEYS.USER, JSON.stringify(user));
     return { user, tokens };
-  }
+  },
 
   async logout(): Promise<void> {
     try {

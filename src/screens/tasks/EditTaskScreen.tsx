@@ -13,13 +13,12 @@ import { updateTaskThunk } from '@store/slices/taskSlice';
 import { useTheme } from '@hooks/useTheme';
 import { taskSchema } from '@utils/validation';
 import type { TaskStackParamList } from '@types/navigation';
-import type { CreateTaskData, TaskPriority, TaskCategory, TaskStatus } from '@types/task';
+import type { CreateTaskData, TaskPriority, TaskCategory } from '@types/task';
 
 type RoutePropType = RouteProp<TaskStackParamList, 'EditTask'>;
 
 const PRIORITIES: TaskPriority[] = ['low', 'medium', 'high', 'urgent'];
 const CATEGORIES: TaskCategory[] = ['work', 'personal', 'health', 'finance', 'education', 'other'];
-const STATUSES: TaskStatus[] = ['todo', 'in_progress', 'review', 'done', 'cancelled'];
 
 export const EditTaskScreen: React.FC = () => {
   const navigation = useNavigation();

@@ -24,7 +24,6 @@ export const LoginScreen: React.FC = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors },
   } = useForm<LoginCredentials>({
     resolver: yupResolver(loginSchema),
     defaultValues: { email: '', password: '', rememberMe: false },

@@ -38,7 +38,7 @@ describe('Button', () => {
   });
 
   it('shows loading indicator when isLoading is true', () => {
-    const { queryByText, getByTestId } = render(
+    const { queryByText } = render(
       <Button title="Loading" onPress={() => {}} isLoading />
     );
     expect(queryByText('Loading')).toBeNull();
