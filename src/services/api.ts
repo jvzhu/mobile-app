@@ -63,10 +63,9 @@ apiInstance.interceptors.response.use(
 
     const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
 
-    if (
-      error.response?.status === HTTP_STATUS.UNAUTHORIZED &&
-      !originalRequest._retry
-    ) {
+    if (error.response?.status === HTTP_STATUS.UNAUTHORIZED && !originalRequest._retry) {
+      originalRequest._retry = true;
+
       if (isRefreshing) {
         return new Promise<string>((resolve, reject) => {
           failedQueue.push({ resolve, reject });
@@ -80,9 +79,7 @@ apiInstance.interceptors.response.use(
           .catch(err => Promise.reject(err));
       }
 
-      originalRequest._retry = true;
       isRefreshing = true;
-
       try {
         const refreshToken = await storageService.getRefreshToken();
         if (!refreshToken) throw new Error('No refresh token');
