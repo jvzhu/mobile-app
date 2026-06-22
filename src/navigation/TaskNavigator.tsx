@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import type { TaskStackParamList } from '@types/navigation';
+import type { TaskStackParamList } from '@app-types/navigation';
 import { TaskListScreen } from '@screens/tasks/TaskListScreen';
 import { TaskDetailScreen } from '@screens/tasks/TaskDetailScreen';
 import { CreateTaskScreen } from '@screens/tasks/CreateTaskScreen';

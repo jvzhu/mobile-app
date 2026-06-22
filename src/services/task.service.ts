@@ -1,7 +1,7 @@
 import { api } from './api';
 import { API_ENDPOINTS } from '@constants/api';
-import type { Task, CreateTaskData, UpdateTaskData } from '@types/task';
-import type { ApiResponse, PaginatedResponse, PaginationParams } from '@types/api';
+import type { Task, CreateTaskData, UpdateTaskData } from '@app-types/task';
+import type { ApiResponse, PaginatedResponse, PaginationParams } from '@app-types/api';
 
 export const taskService = {
   async getTasks(params?: PaginationParams & { status?: string; priority?: string }): Promise<PaginatedResponse<Task>> {

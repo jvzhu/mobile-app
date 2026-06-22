@@ -9,8 +9,8 @@ import { FormButton } from '@components/forms/FormButton';
 import { useTheme } from '@hooks/useTheme';
 import { authService } from '@services/auth.service';
 import { resetPasswordSchema } from '@utils/validation';
-import type { AuthStackParamList } from '@types/navigation';
-import type { ResetPasswordData } from '@types/auth';
+import type { AuthStackParamList } from '@app-types/navigation';
+import type { ResetPasswordData } from '@app-types/auth';
 
 type RoutePropType = RouteProp<AuthStackParamList, 'ResetPassword'>;
 

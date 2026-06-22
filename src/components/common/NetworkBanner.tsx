@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, Animated, StyleSheet } from 'react-native';
+import { Text, Animated, StyleSheet } from 'react-native';
 import { useNetwork } from '@hooks/useNetwork';
 import { useTheme } from '@hooks/useTheme';
 

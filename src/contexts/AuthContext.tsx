@@ -2,7 +2,7 @@ import React, { createContext, useContext, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState, AppDispatch } from '@store/index';
 import { loginThunk, registerThunk, logoutThunk } from '@store/slices/authSlice';
-import type { LoginCredentials, RegisterData, User } from '@types/auth';
+import type { LoginCredentials, RegisterData, User } from '@app-types/auth';
 
 interface AuthContextValue {
   user: User | null;

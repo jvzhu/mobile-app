@@ -1,5 +1,5 @@
 import type { LinkingOptions } from '@react-navigation/native';
-import type { RootStackParamList } from '@types/navigation';
+import type { RootStackParamList } from '@app-types/navigation';
 
 export const linking: LinkingOptions<RootStackParamList> = {
   prefixes: ['mobileapp://', 'https://mobileapp.example.com'],

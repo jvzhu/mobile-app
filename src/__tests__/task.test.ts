@@ -7,7 +7,7 @@ import taskReducer, {
   setFilters,
   clearTasks,
 } from '@store/slices/taskSlice';
-import type { TaskState } from '@types/task';
+import type { TaskState } from '@app-types/task';
 
 jest.mock('@services/task.service', () => ({
   taskService: {

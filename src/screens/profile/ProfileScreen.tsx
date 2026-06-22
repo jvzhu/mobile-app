@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import type { ProfileStackParamList } from '@types/navigation';
+import type { ProfileStackParamList } from '@app-types/navigation';
 import { Screen } from '@components/layout/Screen';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';

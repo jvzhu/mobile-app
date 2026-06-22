@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { taskService } from '@services/task.service';
-import type { Task, TaskState, TaskFilters, CreateTaskData, UpdateTaskData } from '@types/task';
+import type { Task, TaskState, TaskFilters, CreateTaskData, UpdateTaskData } from '@app-types/task';
 
 const initialState: TaskState = {
   tasks: [],

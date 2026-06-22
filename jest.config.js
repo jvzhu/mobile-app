@@ -9,6 +9,7 @@ module.exports = {
     '^@services/(.*)$': '<rootDir>/src/services/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@app-types/(.*)$': '<rootDir>/src/types/$1',
     '^@types/(.*)$': '<rootDir>/src/types/$1',
     '^@constants/(.*)$': '<rootDir>/src/constants/$1',
     '^@contexts/(.*)$': '<rootDir>/src/contexts/$1',

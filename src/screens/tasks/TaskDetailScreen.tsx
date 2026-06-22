@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import type { TaskStackParamList } from '@types/navigation';
+import type { TaskStackParamList } from '@app-types/navigation';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';
 import { Badge } from '@components/ui/Badge';

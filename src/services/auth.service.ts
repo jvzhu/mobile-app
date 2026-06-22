@@ -10,8 +10,8 @@ import type {
   ResetPasswordData,
   RefreshTokenResponse,
   User,
-} from '@types/auth';
-import type { ApiResponse } from '@types/api';
+} from '@app-types/auth';
+import type { ApiResponse } from '@app-types/api';
 
 export const authService = {
   async login(credentials: LoginCredentials): Promise<AuthResponse> {

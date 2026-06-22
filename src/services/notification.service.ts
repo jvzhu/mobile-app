@@ -3,8 +3,8 @@ import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 import { api } from './api';
 import { API_ENDPOINTS } from '@constants/api';
-import type { AppNotification, PushNotificationPayload } from '@types/notification';
-import type { ApiResponse, PaginatedResponse } from '@types/api';
+import type { AppNotification, PushNotificationPayload } from '@app-types/notification';
+import type { PaginatedResponse } from '@app-types/api';
 import { logger } from '@utils/logger';
 
 Notifications.setNotificationHandler({
@@ -96,13 +96,13 @@ export const notificationService = {
 
   addNotificationListener(
     callback: (notification: Notifications.Notification) => void
-  ): Notifications.EventSubscription {
+  ): Notifications.Subscription {
     return Notifications.addNotificationReceivedListener(callback);
   },
 
   addNotificationResponseListener(
     callback: (response: Notifications.NotificationResponse) => void
-  ): Notifications.EventSubscription {
+  ): Notifications.Subscription {
     return Notifications.addNotificationResponseReceivedListener(callback);
   },
 };

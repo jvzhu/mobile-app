@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
-import type { DrawerParamList, ProfileStackParamList } from '@types/navigation';
+import type { DrawerParamList, ProfileStackParamList } from '@app-types/navigation';
 import { MainNavigator } from './MainNavigator';
 import { ProfileScreen } from '@screens/profile/ProfileScreen';
 import { EditProfileScreen } from '@screens/profile/EditProfileScreen';

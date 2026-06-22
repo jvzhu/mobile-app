@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
-import type { MainTabParamList } from '@types/navigation';
+import type { MainTabParamList } from '@app-types/navigation';
 import { HomeNavigator } from './HomeNavigator';
 import { TaskNavigator } from './TaskNavigator';
 import { ProfileStackNavigator } from './DrawerNavigator';

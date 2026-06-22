@@ -1,7 +1,7 @@
 import { api } from './api';
 import { API_ENDPOINTS } from '@constants/api';
-import type { User, UpdateProfileData } from '@types/auth';
-import type { ApiResponse } from '@types/api';
+import type { User, UpdateProfileData } from '@app-types/auth';
+import type { ApiResponse } from '@app-types/api';
 
 export const userService = {
   async getProfile(): Promise<User> {

@@ -5,7 +5,7 @@ import authReducer, {
   clearError,
   updateUser,
 } from '@store/slices/authSlice';
-import type { AuthState } from '@types/auth';
+import type { AuthState } from '@app-types/auth';
 
 jest.mock('@services/auth.service', () => ({
   authService: {

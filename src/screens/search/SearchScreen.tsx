@@ -8,6 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import type { NavigationProp } from '@react-navigation/native';
 import { Screen } from '@components/layout/Screen';
 import { Card } from '@components/ui/Card';
 import { Badge } from '@components/ui/Badge';
@@ -16,7 +17,7 @@ import { EmptyState } from '@components/layout/EmptyState';
 import { useTheme } from '@hooks/useTheme';
 import { useDebounce } from '@hooks/useDebounce';
 import { taskService } from '@services/task.service';
-import type { Task } from '@types/task';
+import type { Task } from '@app-types/task';
 import { formatRelativeTime } from '@utils/format';
 
 const priorityColors = {
@@ -29,7 +30,7 @@ const priorityColors = {
 export const SearchScreen: React.FC = () => {
   const { theme } = useTheme();
   const { colors } = theme;
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProp<Record<string, object | undefined>>>();
 
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Task[]>([]);
@@ -84,10 +85,10 @@ export const SearchScreen: React.FC = () => {
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() =>
-                navigation.navigate('TasksTab' as never, {
+                navigation.navigate('TasksTab', {
                   screen: 'TaskDetail',
                   params: { taskId: item.id },
-                } as never)
+                })
               }
             >
               <Card style={styles.resultCard}>

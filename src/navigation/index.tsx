@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import type { RootStackParamList } from '@types/navigation';
+import type { RootStackParamList } from '@app-types/navigation';
 import { AuthNavigator } from './AuthNavigator';
 import { DrawerNavigator } from './DrawerNavigator';
 import { useAuth } from '@hooks/useAuth';

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { notificationService } from '@services/notification.service';
-import type { NotificationState, AppNotification } from '@types/notification';
+import type { NotificationState, AppNotification } from '@app-types/notification';
 
 const initialState: NotificationState = {
   notifications: [],
@@ -30,7 +30,7 @@ export const registerPushNotificationsThunk = createAsyncThunk(
 
 export const fetchNotificationsThunk = createAsyncThunk(
   'notifications/fetchAll',
-  async (page = 1, { rejectWithValue }) => {
+  async (page: number = 1, { rejectWithValue }) => {
     try {
       return await notificationService.getNotifications(page);
     } catch (error) {
@@ -60,6 +60,7 @@ export const markAllNotificationsReadThunk = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       await notificationService.markAllAsRead();
+      return;
     } catch (error) {
       return rejectWithValue(
         error instanceof Error ? error.message : 'Failed to mark all notifications as read'

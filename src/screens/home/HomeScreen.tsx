@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import type { HomeStackParamList } from '@types/navigation';
+import type { HomeStackParamList } from '@app-types/navigation';
 import { Screen } from '@components/layout/Screen';
 import { Card } from '@components/ui/Card';
 import { Badge } from '@components/ui/Badge';
@@ -19,7 +19,7 @@ import { useAppDispatch } from '@hooks/useAppDispatch';
 import { useAppSelector } from '@hooks/useAppSelector';
 import { fetchTasksThunk } from '@store/slices/taskSlice';
 import { formatRelativeTime } from '@utils/format';
-import type { Task } from '@types/task';
+import type { Task } from '@app-types/task';
 
 type NavProp = StackNavigationProp<HomeStackParamList, 'Home'>;
 

@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { lightTheme, darkTheme } from '@theme/index';
-import type { Theme } from '@theme/lightTheme';
+import type { Theme } from '@theme/index';
 import type { RootState } from '@store/index';
 import { setTheme } from '@store/slices/uiSlice';
 import type { ThemeMode } from '@store/slices/uiSlice';
@@ -27,7 +27,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const resolvedDark =
     themeMode === 'system' ? systemColorScheme === 'dark' : themeMode === 'dark';
 
-  const theme = resolvedDark ? darkTheme : lightTheme;
+  const theme = (resolvedDark ? darkTheme : lightTheme) as Theme;
   const isDark = resolvedDark;
 
   useEffect(() => {

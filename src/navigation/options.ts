@@ -1,6 +1,6 @@
 import { StackNavigationOptions } from '@react-navigation/stack';
 import { TransitionPresets } from '@react-navigation/stack';
-import type { Theme } from '@theme/lightTheme';
+import type { Theme } from '@theme/index';
 
 export const getDefaultScreenOptions = (theme: Theme): StackNavigationOptions => ({
   headerShown: false,

@@ -12,8 +12,8 @@ import { useAppDispatch } from '@hooks/useAppDispatch';
 import { updateTaskThunk } from '@store/slices/taskSlice';
 import { useTheme } from '@hooks/useTheme';
 import { taskSchema } from '@utils/validation';
-import type { TaskStackParamList } from '@types/navigation';
-import type { CreateTaskData, TaskPriority, TaskCategory } from '@types/task';
+import type { TaskStackParamList } from '@app-types/navigation';
+import type { CreateTaskData, TaskPriority, TaskCategory } from '@app-types/task';
 
 type RoutePropType = RouteProp<TaskStackParamList, 'EditTask'>;
 

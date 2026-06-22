@@ -37,7 +37,7 @@ export const withRetry = async <T>(
     } catch (err) {
       lastError = err instanceof Error ? err : new Error(String(err));
       if (attempt < maxRetries - 1) {
-        await new Promise(resolve => setTimeout(resolve, delayMs * (attempt + 1)));
+        await new Promise<void>(resolve => setTimeout(resolve, delayMs * (attempt + 1)));
       }
     }
   }

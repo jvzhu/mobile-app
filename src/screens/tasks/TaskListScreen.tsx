@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import type { TaskStackParamList } from '@types/navigation';
+import type { TaskStackParamList } from '@app-types/navigation';
 import { Header } from '@components/layout/Header';
 import { Card } from '@components/ui/Card';
 import { Badge } from '@components/ui/Badge';
@@ -20,7 +20,7 @@ import { fetchTasksThunk, setFilters } from '@store/slices/taskSlice';
 import { useTheme } from '@hooks/useTheme';
 import { useDebounce } from '@hooks/useDebounce';
 import { formatDate } from '@utils/format';
-import type { Task, TaskStatus } from '@types/task';
+import type { Task, TaskStatus } from '@app-types/task';
 
 type NavProp = StackNavigationProp<TaskStackParamList, 'TaskList'>;
 

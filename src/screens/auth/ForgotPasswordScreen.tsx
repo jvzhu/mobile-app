@@ -9,7 +9,7 @@ import { FormButton } from '@components/forms/FormButton';
 import { useTheme } from '@hooks/useTheme';
 import { authService } from '@services/auth.service';
 import { forgotPasswordSchema } from '@utils/validation';
-import type { ForgotPasswordData } from '@types/auth';
+import type { ForgotPasswordData } from '@app-types/auth';
 
 export const ForgotPasswordScreen: React.FC = () => {
   const navigation = useNavigation();

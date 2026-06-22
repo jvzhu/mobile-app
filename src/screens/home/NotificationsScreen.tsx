@@ -6,7 +6,7 @@ import { Card } from '@components/ui/Card';
 import { useNotifications } from '@hooks/useNotifications';
 import { useTheme } from '@hooks/useTheme';
 import { formatRelativeTime } from '@utils/format';
-import type { AppNotification } from '@types/notification';
+import type { AppNotification } from '@app-types/notification';
 
 const NotificationItem: React.FC<{
   notification: AppNotification;

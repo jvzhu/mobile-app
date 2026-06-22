@@ -11,7 +11,7 @@ import { useAppDispatch } from '@hooks/useAppDispatch';
 import { createTaskThunk } from '@store/slices/taskSlice';
 import { useTheme } from '@hooks/useTheme';
 import { taskSchema } from '@utils/validation';
-import type { CreateTaskData, TaskPriority, TaskCategory } from '@types/task';
+import type { CreateTaskData, TaskPriority, TaskCategory } from '@app-types/task';
 import { Button } from '@components/ui/Button';
 
 const PRIORITIES: TaskPriority[] = ['low', 'medium', 'high', 'urgent'];
