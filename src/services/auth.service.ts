@@ -44,7 +44,7 @@ export const authService = {
       await storageService.clearTokens();
       await storageService.deleteSecureItem(STORAGE_KEYS.USER);
     }
-  }
+  },
 
   async forgotPassword(data: ForgotPasswordData): Promise<void> {
     await api.post(API_ENDPOINTS.FORGOT_PASSWORD, data);
